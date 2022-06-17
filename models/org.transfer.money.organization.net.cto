@@ -2,7 +2,7 @@
  * Write your model definitions here
  */
 
-namespace org.transfer.money.organization.net
+namespace org.charity.net
 enum ProjectStatus{
   o INITIALSTATE
   o GOVERNMENTREVIEW

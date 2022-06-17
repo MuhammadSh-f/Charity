@@ -20,7 +20,7 @@
  */
 //  rule DonerSeeOwnHistoryOnly {
 //   description: "Doners should be able to see the history of their own transactions only"
-//   participant(p): "org.transfer.money.organization.net.Doner"
+//   participant(p): "org.charity.net.Doner"
 //   operation: READ
 //   resource(r): "org.hyperledger.composer.system.HistorianRecord"
 //   condition: (r.participantInvoking.getIdentifier() != p.getIdentifier())
@@ -28,24 +28,24 @@
 // }
 // rule DonerSeeTheSendMoneyTheyMadeOnly {
 //     description: "Doner See The Send Money They Made Only"
-//     participant(p): "org.transfer.money.organization.net.Doner"
+//     participant(p): "org.charity.net.Doner"
 //     operation: READ
-//     resource(r): "org.transfer.money.organization.net.SendMoney"
+//     resource(r): "org.charity.net.SendMoney"
 //     condition: (p.getIdentifier() != r.donerId.getIdentifier())
 //     action: DENY
 // }
 rule Doner {
     description: "Allow the client full access"
-    participant: "org.transfer.money.organization.net.Doner"
+    participant: "org.charity.net.Doner"
     operation: READ
-    resource: "org.transfer.money.organization.net.*"
+    resource: "org.charity.net.*"
     action: ALLOW
 }
 rule Default {
     description: "Allow all participants access to all resources"
     participant: "ANY"
     operation: ALL
-    resource: "org.transfer.money.organization.net.*"
+    resource: "org.charity.net.*"
     action: ALLOW
 }
 
