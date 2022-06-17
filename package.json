@@ -1,12 +1,12 @@
 {
   "engines": {
-    "composer": "^0.20.9"
+    "composer": "^0.19.20"
   },
-  "name": "track-donation",
-  "version": "0.0.8",
-  "description": "track donation using blockchain",
+  "name": "charity",
+  "version": "0.0.1",
+  "description": "Track Donation System Using Blockchain Techonolgy",
   "scripts": {
-    "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/track-donation.bna",
+    "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/block-track.bna",
     "pretest": "npm run lint",
     "lint": "eslint .",
     "test": "nyc mocha -t 0 test/*.js && cucumber-js"
@@ -19,12 +19,12 @@
   "email": "mada.tmw@gmail.com",
   "license": "Apache-2.0",
   "devDependencies": {
-    "composer-admin": "^0.20.9",
-    "composer-cli": "^0.20.9",
-    "composer-client": "^0.20.9",
-    "composer-common": "^0.20.9",
-    "composer-connector-embedded": "^0.20.9",
-    "composer-cucumber-steps": "^0.20.9",
+    "composer-admin": "^0.19.20",
+    "composer-cli": "^0.19.20",
+    "composer-client": "^0.19.20",
+    "composer-common": "^0.19.20",
+    "composer-connector-embedded": "^0.19.20",
+    "composer-cucumber-steps": "^0.19.20",
     "chai": "latest",
     "chai-as-promised": "latest",
     "cucumber": "^2.2.0",

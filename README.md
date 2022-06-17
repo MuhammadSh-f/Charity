@@ -1,3 +1,3 @@
-# track-donation
+# Charity
 
-track donation using blockchain
+Track Donation System Using Blockchain Techonolgy
