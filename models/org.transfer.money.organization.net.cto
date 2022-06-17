@@ -9,6 +9,10 @@ enum ProjectStatus{
   o READYFORDONATION
 }
 
+enum Progress {
+  o UNCOMPLETED
+  o COMPLETED
+}
  asset SendMoney identified by MId{
   o String MId 
   o Double Amount 
@@ -24,6 +28,7 @@ asset ProjectPledge identified by pledgeId {
   o Double fundsRequired
   o Double fundsReceived
   o ProjectStatus status
+  o Progress progress
   --> Charity CharityId 
   --> SendMoney[] sendMoney optional
 }
@@ -57,10 +62,7 @@ transaction CreateProjectPledge {
   o String pledgeId
   o String name
   o String description
-  o Boolean needDonation
   o Double fundsRequired
-  o Double fundsReceived
-  o ProjectStatus status
   --> Charity CharityId  
 }
 
@@ -78,8 +80,5 @@ transaction CreateSendMoney{
   o String MId 
   o Double Amount 
   --> Doner donerId 
-  --> ProjectPledge pledgeId
-}
-transaction UpdateProject{
   --> ProjectPledge pledgeId
 }
