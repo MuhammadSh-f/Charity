@@ -2,7 +2,7 @@
   "engines": {
     "composer": "^0.19.20"
   },
-  "name": "charity",
+  "name": "transfer-money",
   "version": "0.0.1",
   "description": "Track Donation System Using Blockchain Techonolgy",
   "scripts": {

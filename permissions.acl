@@ -36,16 +36,16 @@
 // }
 rule Doner {
     description: "Allow the client full access"
-    participant: "org.charity.net.Doner"
+    participant: "org.transfer.money.organization.net.Doner"
     operation: READ
-    resource: "org.charity.net.*"
+    resource: "org.transfer.money.organization.net.*"
     action: ALLOW
 }
 rule Default {
     description: "Allow all participants access to all resources"
     participant: "ANY"
     operation: ALL
-    resource: "org.charity.net.*"
+    resource: "org.transfer.money.organization.net.*"
     action: ALLOW
 }
 
